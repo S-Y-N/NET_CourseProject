@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E222AC18-35CA-4362-9A60-8842D4D048C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PetVet</RootNamespace>
+    <AssemblyName>PetVet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.3, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.3\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UC_AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UC_AddUser.Designer.cs">
+      <DependentUpon>UC_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UC_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UC_Dashboard.Designer.cs">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UC_ViewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UC_ViewUser.Designer.cs">
+      <DependentUpon>UC_ViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\UС_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUI\UС_Profile.Designer.cs">
+      <DependentUpon>UС_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_AddMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_AddMed.Designer.cs">
+      <DependentUpon>UC_Doc_AddMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Dashbord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Dashbord.Designer.cs">
+      <DependentUpon>UC_Doc_Dashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Sell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Sell.Designer.cs">
+      <DependentUpon>UC_Doc_Sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_Update.Designer.cs">
+      <DependentUpon>UC_Doc_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_ViewMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UC_Doc_ViewMed.Designer.cs">
+      <DependentUpon>UC_Doc_ViewMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\UС_Validate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\UС_Validate.Designer.cs">
+      <DependentUpon>UС_Validate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UC_AddUser.resx">
+      <DependentUpon>UC_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UC_Dashboard.resx">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UC_ViewUser.resx">
+      <DependentUpon>UC_ViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\UС_Profile.resx">
+      <DependentUpon>UС_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UC_Doc_AddMed.resx">
+      <DependentUpon>UC_Doc_AddMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UC_Doc_Dashbord.resx">
+      <DependentUpon>UC_Doc_Dashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UC_Doc_Sell.resx">
+      <DependentUpon>UC_Doc_Sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UC_Doc_Update.resx">
+      <DependentUpon>UC_Doc_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UC_Doc_ViewMed.resx">
+      <DependentUpon>UC_Doc_ViewMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\UС_Validate.resx">
+      <DependentUpon>UС_Validate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e3060987b38e30d480669585671e4fd3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4325d1b2e155f1fdc524ec0d692555f3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close all jframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ca4af20b57850bdc75c69d7da3a1fc25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e3060987b38e30d480669585671e4fd31.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
